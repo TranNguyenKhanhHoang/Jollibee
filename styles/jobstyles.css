@@ -1,0 +1,97 @@
+ /* <!-- Need Assistance --> */
+ .job-sidebar {
+    float: right;         
+    width: 25%;           
+    box-sizing: border-box; 
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 2px solid #e0e0e0; 
+}
+ /* <!-- job lists --> */
+
+
+ .open-positions {
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    padding-right: 30px; 
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .12);
+    transition: .3s;
+    width: 100%; 
+    box-sizing: border-box; 
+    
+}
+
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .18);
+}
+
+.card h3 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    margin-left: 20px;
+}
+
+.card li {
+    margin: 8px 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+
+
+
+body {
+    background: #f4f7f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+ /* <!-- Recruitment Process--> */
+ 
+.rp{
+    
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    padding-right: 30px; 
+}
+
+
+.rp ol {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.rp li {
+    background: #d4e9e2;
+    padding: 18px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+
+/* ---------- Footer ---------- */
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}

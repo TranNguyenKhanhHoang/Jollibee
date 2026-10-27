@@ -1,13 +1,135 @@
- /* <!-- Need Assistance --> */
- .job-sidebar {
-    float: right;         
-    width: 25%;           
-    box-sizing: border-box; 
-    padding: 20px;
-    margin-bottom: 20px;
-    border-left: 2px solid #e0e0e0; 
+/* ================= PAGE HERO BANNER ================= */
+.page-banner {
+    background: linear-gradient(135deg, #1e3932 0%, #00754a 100%);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 0 !important;
 }
- /* <!-- job lists --> */
+
+.page-banner .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-banner h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.page-banner p {
+    font-size: 1.1rem;
+    color: #d4e9e2;
+    margin: 0;
+    font-weight: 400;
+}
+/* ================= ASIDE ================= */
+.sidebar-container {
+    float: right;
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    gap: 95px; 
+    box-sizing: border-box;
+}
+
+
+.career-tips,
+.job-sidebar,
+.aside-widget {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-left: 10px solid #006241; 
+    border-radius: 12px;
+    padding: 20px 22px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.career-tips:hover,
+.job-sidebar:hover,
+.aside-widget:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+.sidebar-container h3 {
+    color: #1e3932;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+
+.sidebar-container p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0 0 10px 0;
+}
+
+
+.sidebar-container ul {
+    padding-left: 18px;
+    margin: 8px 0 0 0;
+}
+
+.sidebar-container li {
+    font-size: 0.88rem;
+    margin-bottom: 8px;
+    color: #444;
+    line-height: 1.4;
+}
+
+.sidebar-container li:last-child {
+    margin-bottom: 0;
+}
+
+/* EMAIL LINKS */
+.job-sidebar a,
+.aside-widget a {
+    color: #00754a;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.job-sidebar a:hover,
+.aside-widget a:hover {
+    text-decoration: underline;
+}
+
+/* Badge / Highlight for Benefits */
+.tag-badge {
+    display: inline-block;
+    background: #d4e9e2;
+    color: #1e3932;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-right: 4px;
+}
+ /* <!-- JOB LISTS --> */
+ section {
+    background: #ffffff;
+    margin-bottom: 35px;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .08);
+}
+
+section h2 {
+    color: #00704A;
+    margin-bottom: 15px;
+}
 
 
  .open-positions {
@@ -18,7 +140,7 @@
 }
 
 .card {
-    background: #fff;
+    background: #d4e9e2;
     border-radius: 15px;
     padding: 25px;
     margin: 25px 0;
@@ -46,6 +168,7 @@
 
 .card li {
     margin: 8px 0;
+    font-weight: 500;
 }
 
 main {
@@ -62,14 +185,15 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
- /* <!-- Recruitment Process--> */
- 
-.rp{
+ /* <!-- RECRUITMENT PROCESS--> */
+
+ .rp{
     
     float: left;
     width: 70%;
     box-sizing: border-box;
     padding-right: 30px; 
+   
 }
 
 
@@ -77,21 +201,31 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
-    list-style: none;
+    counter-reset: step-counter;
     flex-wrap: wrap;
+    list-style: none;
 }
 
 .rp li {
+    counter-increment: step-counter;
     background: #d4e9e2;
-    padding: 18px 30px;
+    padding: 15px 15px;
     border-radius: 30px;
     font-weight: 600;
-}
+    min-width: 250px;      
+    text-align: center;
+} 
 
+.rp li::before {
+  content: counter(step-counter) ". "; 
+  font-weight: bold;
+  margin-right: 6px;
+} 
 
-/* ---------- Footer ---------- */
+/* ---------- FOOTER ---------- */
 main::after {
     content: "";
     display: table;
     clear: both;
 }
+

@@ -1,75 +1,277 @@
-/* ===== Team Contribution ===== */
+/* ==========================================================================
+   NovaCart - About Page (Starbucks Theme)
+   File: styles/aboutstyles.css
+   ========================================================================== */
 
-.team-contribution {
-    margin: 60px auto;
-    max-width: 1100px;
+/* 1. Nhập phông chữ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Georgia&family=Inter:wght@400;500;600;700&display=swap');
+
+/* 2. Khai báo biến màu sắc chuẩn Starbucks */
+:root {
+  --sb-green: #006241;          /* Màu xanh lá Starbucks Classic */
+  --sb-green-hover: #004d33;    /* Xanh đậm khi hover */
+  --sb-bg-cream: #f9f9f5;       /* Màu nền kem ấm đặc trưng Starbucks */
+  --sb-card-bg: #ffffff;        /* Nền trắng cho các khung thẻ */
+  --sb-text-dark: #1e3932;      /* Màu chữ xanh đen đậm cao cấp */
+  --sb-text-muted: #4d4d4d;     /* Màu chữ xám phụ */
+  --sb-line: #d4d3cc;           /* Đường viền mảnh tinh tế */
+  
+  --font-serif: 'Georgia', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-.member-card {
-    background: #fff;
-    border-radius: 15px;
-    padding: 25px;
-    margin: 25px 0;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, .12);
-    transition: .3s;
-}
-
-.member-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, .18);
-}
-
-.member-card h3 {
-    color: #00704A;
-    margin-bottom: 10px;
-}
-
-.member-card h4 {
-    margin-top: 20px;
-    color: #444;
-}
-
-.member-card ul {
-    margin-left: 20px;
-}
-
-.member-card li {
-    margin: 8px 0;
-}
-
-blockquote {
-    margin-top: 20px;
-    background: #f4f8f6;
-    border-left: 5px solid #00704A;
-    padding: 15px 20px;
-    border-radius: 8px;
-    font-style: italic;
-}
-
-main {
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 20px;
-}
-
-section {
-    background: white;
-    margin-bottom: 35px;
-    padding: 35px;
-    border-radius: 18px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
-}
-
-section h2 {
-    color: #00704A;
-    margin-bottom: 15px;
-}
-
-section h3 {
-    color: #444;
+/* 3. Global Reset & Body Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: #f4f7f5;
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background-color: var(--sb-bg-cream);
+  color: var(--sb-text-dark);
+  line-height: 1.6;
+}
+
+/* 4. Header (Thanh đầu trang) */
+header {
+  background-color: var(--sb-green);
+  color: #ffffff;
+  padding: 1.25rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+/* 5. Main Content Container */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Hero Section (Tiêu đề trang About) */
+main > section:first-of-type {
+  text-align: center;
+  padding: 2.5rem 1rem 2rem 1rem;
+  border-bottom: 1px solid var(--sb-line);
+  margin-bottom: 2.5rem;
+}
+
+main > section:first-of-type h1 {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  color: var(--sb-text-dark);
+  font-weight: normal;
+  margin-bottom: 0.75rem;
+}
+
+main > section:first-of-type p {
+  font-size: 1.15rem;
+  color: var(--sb-text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* 6. Typography & Headings */
+h2 {
+  font-family: var(--font-serif);
+  color: var(--sb-green);
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin: 2.5rem 0 1rem 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--sb-line);
+}
+
+h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--sb-text-dark);
+  margin: 1.2rem 0 0.5rem 0;
+}
+
+p {
+  color: var(--sb-text-dark);
+  margin-bottom: 1rem;
+}
+
+/* List Styling */
+main ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+main ul li {
+  margin-bottom: 0.4rem;
+  color: var(--sb-text-muted);
+}
+
+/* 7. Group Photo Container (Figure & Caption) */
+figure {
+  background-color: var(--sb-card-bg);
+  border: 1px solid var(--sb-line);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 1.5rem 0 2.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+figure img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  background-color: #e8e8e3; /* Màu xám kem chờ ảnh */
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--sb-text-muted);
+  font-style: italic;
+}
+
+/* 8. Team Member Cards (Thông tin thành viên) */
+.team-contribution {
+  margin-top: 2rem;
+}
+
+.member-card {
+  background-color: var(--sb-card-bg);
+  border: 1px solid var(--sb-line);
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.member-card h3 {
+  color: var(--sb-green);
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.member-card p strong {
+  color: var(--sb-text-dark);
+}
+
+.member-card h4 {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--sb-green);
+  margin: 1.2rem 0 0.5rem 0;
+}
+
+blockquote {
+  background-color: var(--sb-bg-cream);
+  border-left: 3px solid var(--sb-green);
+  padding: 0.8rem 1.2rem;
+  margin-top: 1.2rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--sb-text-dark);
+  border-radius: 0 8px 8px 0;
+}
+
+/* 9. Articles (Mission, Vision & Values) */
+article {
+  background-color: var(--sb-card-bg);
+  border: 1px solid var(--sb-line);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+article h3 {
+  color: var(--sb-green);
+  margin-top: 0;
+}
+
+/* 10. Call to Action Links (Nút Explore & Apply) */
+main p a {
+  display: inline-block;
+  background-color: var(--sb-green);
+  color: #ffffff;
+  padding: 0.65rem 1.6rem;
+  border-radius: 50px; /* Kiểu nút bo tròn Starbucks */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+main p a:hover {
+  background-color: var(--sb-green-hover);
+  transform: translateY(-1px);
+}
+
+/* 11. Footer (Chân trang phong cách Starbucks) */
+footer {
+  background-color: var(--sb-bg-cream);
+  border-top: 1px solid var(--sb-line);
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--sb-text-dark);
+}
+
+footer h2 {
+  font-family: var(--font-serif);
+  color: var(--sb-green);
+  font-size: 1.6rem;
+  font-weight: normal;
+  border-bottom: none;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: var(--sb-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+footer nav a {
+  color: var(--sb-text-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+footer nav a:hover {
+  color: var(--sb-green);
+  text-decoration: underline;
+}
+
+footer a {
+  color: var(--sb-green);
+  text-decoration: underline;
 }

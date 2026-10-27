@@ -1,20 +1,15 @@
-/* ==========================================================================
-   NovaCart - About Page (Starbucks Theme)
-   File: styles/aboutstyles.css
-   ========================================================================== */
 
-/* 1. Nhập phông chữ Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Georgia&family=Inter:wght@400;500;600;700&display=swap');
 
-/* 2. Khai báo biến màu sắc chuẩn Starbucks */
+
 :root {
-  --sb-green: #006241;          /* Màu xanh lá Starbucks Classic */
-  --sb-green-hover: #004d33;    /* Xanh đậm khi hover */
-  --sb-bg-cream: #f9f9f5;       /* Màu nền kem ấm đặc trưng Starbucks */
-  --sb-card-bg: #ffffff;        /* Nền trắng cho các khung thẻ */
-  --sb-text-dark: #1e3932;      /* Màu chữ xanh đen đậm cao cấp */
-  --sb-text-muted: #4d4d4d;     /* Màu chữ xám phụ */
-  --sb-line: #d4d3cc;           /* Đường viền mảnh tinh tế */
+  --sb-green: #006241;          
+  --sb-green-hover: #004d33;    
+  --sb-bg-cream: #f9f9f5;       
+  --sb-card-bg: #ffffff;        
+  --sb-text-dark: #1e3932;      
+  --sb-text-muted: #4d4d4d;     
+  --sb-line: #d4d3cc;           
   
   --font-serif: 'Georgia', serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;

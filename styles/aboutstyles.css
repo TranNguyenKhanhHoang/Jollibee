@@ -326,5 +326,7 @@ body > footer a {
     body > header {
         padding: 48px 6% 68px;
     }
-
-    body > main {
+body > main > section {
+        padding: 24px 20px;
+    }
+}

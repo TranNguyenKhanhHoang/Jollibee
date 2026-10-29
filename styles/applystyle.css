@@ -4,21 +4,22 @@
    Load after styles.css
    =========================== */
 
-/* Apply page theme */
-body:has(#applyForm) {
+body {
     background: #f4f7f5;
     color: #1e3932;
 }
 
-body:has(#applyForm) > header {
+/* ---------- Header ---------- */
+
+header {
     position: relative;
     overflow: hidden;
     padding: clamp(48px, 8vw, 92px) 5%;
-    color: #fff;
+    color: white;
     background: linear-gradient(120deg, #004d35, #006241 65%, #168264);
 }
 
-body:has(#applyForm) > header::after {
+header::after {
     position: absolute;
     top: -100px;
     right: 8%;
@@ -32,54 +33,55 @@ body:has(#applyForm) > header::after {
     pointer-events: none;
 }
 
-body:has(#applyForm) > header h1,
-body:has(#applyForm) > header p {
+header h1,
+header p {
     position: relative;
     z-index: 1;
     width: min(100%, 900px);
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
 }
 
-body:has(#applyForm) > header h1 {
+header h1 {
     margin-bottom: 8px;
     font-size: clamp(2.2rem, 5vw, 3.5rem);
     line-height: 1.15;
 }
 
-body:has(#applyForm) > header p {
+header p {
     color: #d4e9e2;
     font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-body:has(#applyForm) > main {
+/* ---------- Form ---------- */
+
+main {
     position: relative;
     width: min(90%, 900px);
     margin: -28px auto 64px;
 }
 
-#applyForm {
+form {
     display: grid;
     gap: 18px;
 }
 
-#applyForm > fieldset {
+form > fieldset {
     min-width: 0;
     margin: 0;
     padding: 24px 28px 26px;
     border: 1px solid #e1e8e4;
     border-radius: 16px;
-    background: #fff;
+    background: white;
     box-shadow: 0 8px 24px rgba(30, 57, 50, .07);
-    transition: transform .2s ease, box-shadow .2s ease;
+    transition: .2s;
 }
 
-#applyForm > fieldset:hover {
+form > fieldset:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 28px rgba(30, 57, 50, .11);
 }
 
-#applyForm > fieldset > legend {
+form > fieldset > legend {
     float: left;
     width: 100%;
     margin-bottom: 18px;
@@ -90,26 +92,28 @@ body:has(#applyForm) > main {
     font-weight: 700;
 }
 
-#applyForm > fieldset > legend + * {
+form > fieldset > legend + * {
     clear: both;
 }
 
-#applyForm .field {
+/* ---------- Fields ---------- */
+
+.field {
     min-width: 0;
     margin: 0 0 16px;
 }
 
-#applyForm .field:last-child {
+.field:last-child {
     margin-bottom: 0;
 }
 
-#applyForm .row {
+.row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
 }
 
-#applyForm .field > label {
+.field > label {
     display: block;
     margin-bottom: 6px;
     color: #1e3932;
@@ -117,17 +121,17 @@ body:has(#applyForm) > main {
     font-weight: 600;
 }
 
-#applyForm .hint {
+.hint {
     color: #687b74;
     font-size: .88em;
     font-weight: 400;
 }
 
-#applyForm input[type="text"],
-#applyForm input[type="email"],
-#applyForm input[type="tel"],
-#applyForm select,
-#applyForm textarea {
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
     display: block;
     width: 100%;
     min-height: 46px;
@@ -136,38 +140,37 @@ body:has(#applyForm) > main {
     border-radius: 8px;
     outline: none;
     color: #1e3932;
-    background: #fff;
+    background: white;
     font: inherit;
     font-size: .95rem;
-    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    transition: .2s;
 }
 
-#applyForm select {
+select {
     cursor: pointer;
 }
 
-#applyForm textarea {
+textarea {
     min-height: 130px;
     resize: vertical;
 }
 
-#applyForm input::placeholder,
-#applyForm textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: #93a29b;
 }
 
-#applyForm input[type="text"]:focus,
-#applyForm input[type="email"]:focus,
-#applyForm input[type="tel"]:focus,
-#applyForm select:focus,
-#applyForm textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
     border-color: #006241;
     background: #fcfefd;
     box-shadow: 0 0 0 4px rgba(0, 98, 65, .13);
 }
 
-/* Gender options */
-#applyForm fieldset fieldset {
+/* ---------- Options ---------- */
+
+form fieldset fieldset {
     min-width: 0;
     margin: 4px 0 0;
     padding: 14px 16px 16px;
@@ -176,22 +179,22 @@ body:has(#applyForm) > main {
     background: #f8fbf9;
 }
 
-#applyForm fieldset fieldset legend {
+form fieldset fieldset legend {
     padding: 0 5px;
     color: #1e3932;
     font-size: .92rem;
     font-weight: 600;
 }
 
-#applyForm .options,
-#applyForm .skills {
+.options,
+.skills {
     display: flex;
     flex-wrap: wrap;
     gap: 9px;
 }
 
-#applyForm .options label,
-#applyForm .skills label {
+.options label,
+.skills label {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -200,41 +203,43 @@ body:has(#applyForm) > main {
     border: 1px solid #dce7e1;
     border-radius: 8px;
     color: #29483e;
-    background: #fff;
+    background: white;
     cursor: pointer;
     font-size: .9rem;
     font-weight: 500;
-    transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+    transition: .18s;
 }
 
-#applyForm .options label:hover,
-#applyForm .skills label:hover {
+.options label:hover,
+.skills label:hover {
     transform: translateY(-1px);
     border-color: #8ab4a3;
     background: #f3f8f5;
     box-shadow: 0 3px 8px rgba(30, 57, 50, .08);
 }
 
-#applyForm input[type="radio"],
-#applyForm input[type="checkbox"] {
+input[type="radio"],
+input[type="checkbox"] {
+    flex: 0 0 auto;
     width: 17px;
     height: 17px;
     margin: 0;
     accent-color: #006241;
-    flex: 0 0 auto;
 }
 
-#applyForm .skills {
+.skills {
     margin-bottom: 20px;
 }
 
-#applyForm .actions {
+/* ---------- Buttons ---------- */
+
+.actions {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
 
-#applyForm .actions button {
+.actions button {
     min-height: 47px;
     padding: 11px 24px;
     border: 2px solid #006241;
@@ -242,89 +247,93 @@ body:has(#applyForm) > main {
     cursor: pointer;
     font: inherit;
     font-weight: 600;
-    transition: transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
+    transition: .18s;
 }
 
-#applyForm .actions button[type="submit"] {
-    color: #fff;
+.actions button[type="submit"] {
+    color: white;
     background: #006241;
     box-shadow: 0 5px 12px rgba(0, 98, 65, .18);
 }
 
-#applyForm .actions button[type="submit"]:hover {
+.actions button[type="submit"]:hover {
     transform: translateY(-2px);
     background: #004d35;
     box-shadow: 0 8px 16px rgba(0, 77, 53, .22);
 }
 
-#applyForm .actions button[type="reset"] {
+.actions button[type="reset"] {
     color: #006241;
-    background: #fff;
+    background: white;
 }
 
-#applyForm .actions button[type="reset"]:hover {
-    color: #fff;
+.actions button[type="reset"]:hover {
+    color: white;
     background: #006241;
 }
 
-#applyForm .actions button:focus-visible {
+.actions button:focus-visible {
     outline: 3px solid #e5ad48;
     outline-offset: 3px;
 }
 
-body:has(#applyForm) > footer {
+/* ---------- Footer ---------- */
+
+footer {
     padding: 38px 20px;
     background: #1e3932;
 }
 
+/* ---------- Responsive ---------- */
+
 @media (max-width: 680px) {
-    body:has(#applyForm) > header {
+    header {
         padding: 48px 6% 68px;
     }
 
-    body:has(#applyForm) > main {
+    main {
         width: 92%;
         margin-top: -22px;
     }
 
-    #applyForm {
+    form {
         gap: 13px;
     }
 
-    #applyForm > fieldset {
+    form > fieldset {
         padding: 19px 17px 21px;
     }
 
-    #applyForm .row {
+    .row {
         grid-template-columns: 1fr;
         gap: 0;
     }
 
-    #applyForm .options,
-    #applyForm .skills {
+    .options,
+    .skills {
         gap: 7px;
     }
 
-    #applyForm .options label,
-    #applyForm .skills label {
+    .options label,
+    .skills label {
         padding: 8px 10px;
     }
 
-    #applyForm .actions {
+    .actions {
         display: grid;
         grid-template-columns: 1fr;
     }
 
-    #applyForm .actions button {
+    .actions button {
         width: 100%;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    #applyForm > fieldset,
-    #applyForm .options label,
-    #applyForm .skills label,
-    #applyForm .actions button {
+    form > fieldset,
+    .options label,
+    .skills label,
+    .actions button {
         transition: none;
     }
 }

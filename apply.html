@@ -168,21 +168,6 @@
 
   <footer>&copy; 2026 NovaCart. All rights reserved.</footer>
 
-  <script>
-    // Require at least one skill checkbox: all are required until one is ticked.
-    (function () {
-      var boxes = document.querySelectorAll('#skillList input[type="checkbox"]');
-      function sync() {
-        var any = Array.prototype.some.call(boxes, function (b) { return b.checked; });
-        boxes.forEach(function (b) { b.required = !any; });
-      }
-      boxes.forEach(function (b) { b.addEventListener('change', sync); });
-      document.getElementById('applyForm').addEventListener('reset', function () {
-        setTimeout(sync, 0);
-      });
-      sync();
-    })();
-  </script>
 </body>
 
 </html>

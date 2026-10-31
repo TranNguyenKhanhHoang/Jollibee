@@ -1,40 +1,11 @@
-/* ================= PAGE HERO BANNER ================= */
-.page-banner {
-    background: linear-gradient(135deg, #1e3932 0%, #00754a 100%);
-    color: #ffffff;
-    padding: 60px 20px;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    border-radius: 0 !important;
-}
 
-.page-banner .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.page-banner h1 {
-    font-size: 2.6rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #ffffff;
-}
-
-.page-banner p {
-    font-size: 1.1rem;
-    color: #d4e9e2;
-    margin: 0;
-    font-weight: 400;
-}
 /* ================= ASIDE ================= */
 .sidebar-container {
     float: right;
-    width: 28%;
+    width: 25%;
     display: flex;
     flex-direction: column;
-    gap: 95px; 
+    gap: 60px; 
     box-sizing: border-box;
 }
 
@@ -118,7 +89,7 @@
     margin-right: 4px;
 }
  /* <!-- JOB LISTS --> */
- section {
+section {
     background: #ffffff;
     margin-bottom: 35px;
     padding: 35px;
@@ -127,7 +98,7 @@
 }
 
 section h2 {
-    color: #00704A;
+    color: #00704A; 
     margin-bottom: 15px;
 }
 
@@ -158,8 +129,9 @@ section h2 {
 }
 
 .card h3 {
-    color: #444;
+    color: #00704A;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .card ul {
@@ -228,4 +200,10 @@ main::after {
     display: table;
     clear: both;
 }
+
+
+
+
+
+
 

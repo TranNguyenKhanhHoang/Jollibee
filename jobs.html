@@ -10,9 +10,46 @@
 
     <title>NovaCart | Jobs</title>
 
-
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/jobstyles.css">
+   
+
+    <!--  EMBEDDED CSS -->
+    <style>
+        
+        /* ================= PAGE HERO BANNER ================= */
+.page-banner {
+    background: linear-gradient(120deg, #004d35, #006241 65%, #168264);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 0 !important;
+}
+
+.page-banner .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-banner h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.page-banner p {
+    font-size: 1.1rem;
+    color: #d4e9e2;
+    margin: 0;
+    font-weight: 400;
+}
+    </style>
+</head>
 
 <body>
     <!-- ================= HEADER ================= -->
@@ -21,17 +58,20 @@
 
         <div class="container">
 
-            <a href="Home page.html" class="logo">
-                NovaCart
-            </a>
+          
+           <a href="Home page.html" class="logo-container" style="display: flex; align-items: center; gap: 5px; text-decoration: none;">
+            
+        <img src="./logo.png" alt="NovaCart Logo" class="logo-img" style="height: 40px; width: auto;">
+        <span class="logo">NovaCart</span>
+    </a>
 
             <nav class="navbar">
 
                 <ul>
 
-                    <li><a href="Home page.html" class="active">Home</a></li>
+                    <li><a href="Home page.html" >Home</a></li>
 
-                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="jobs.html" class="active">Jobs</a></li>
 
                     <li><a href="apply.html">Apply</a></li>
 
@@ -118,7 +158,8 @@
         <section class="open-positions">
 
 
-            <h2>Open Positions</h2>
+            
+            <h2 >Open Positions</h2>
 
             <div class="card-job">
 
@@ -129,18 +170,25 @@
                     <h3>Front-End Web Developer</h3>
 
                     <ul>
-                        <li>Reference Number: FE102</li>
-                        <li>Short Description:
-                            We are seeking a talented Front-End Web Developer to build, optimize, and maintain
-                            responsive,
-                            accessible customer-facing web interfaces for our online retail platform.</li>
-                        <li>Salary: $1,200 – $1,800 / month</li>
-                        <li>Reporting Line: Reports to the Technical Lead / Engineering Manager</li>
-
-                        <li>Professional Communication and Presentation </li>
-                         <li>Teamwork Framework</li>
+                        <li><strong>Reference Number:</strong> FE102</li>
+                        <li><strong>Short Description:</strong> We are seeking a talented Front-End Web Developer to
+                            build, optimize, and maintain responsive, accessible customer-facing web interfaces for our
+                            online retail platform.</li>
+                        <li><strong>Salary:</strong> $1,200 – $1,800 / month</li>
+                        <li><strong>Reporting Line:</strong> Reports to the Technical Lead / Engineering Manager</li>
+                        <li><strong>Key Responsibilities:</strong>
+                            <ul>
+                                <li>Develop user-facing features using modern web technologies.</li>
+                                <li>Ensure the technical feasibility of UI/UX designs.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Requirements & Framework:</strong>
+                            <ul>
+                                <li>Professional Communication and Presentation</li>
+                                <li>Teamwork Framework</li>
+                            </ul>
+                        </li>
                     </ul>
-
                     <a href="apply.html">
                         Apply now →
                     </a>
@@ -154,19 +202,33 @@
                     <h3>UX/UI Designer</h3>
 
                     <ul>
-                        <li>Reference Number: FE102</li>
-                        <li>Short Description:
-                            We are seeking a talented Front-End Web Developer to build, optimize, and maintain
-                            responsive,
-                            accessible customer-facing web interfaces for our online retail platform.</li>
-                        <li>Salary: $1,200 – $1,800 / month</li>
-                        <li>Reporting Line: Reports to the Technical Lead / Engineering Manager</li>
-                        <li>Professional Communication and Presentation</li>
-                        <li>Teamwork Framework</li>
+                        <li><strong>Reference Number:</strong> UX102</li>
+                        <li><strong>Short Description:</strong> We are seeking a creative UX/UI Designer to design
+                            intuitive, engaging, and user-centric digital interfaces for our e-commerce platform.</li>
+                        <li><strong>Salary:</strong> $1,200 – $1,800 / month</li>
+                        <li><strong>Reporting Line:</strong> Reports to the Product Manager / Head of Design</li>
+
+                        <li><strong>Key Responsibilities:</strong>
+                            <ul>
+                                <li>Design user flows, wireframes, prototypes, and high-fidelity mockups.</li>
+                                <li>Collaborate with developers to ensure design integrity.</li>
+                            </ul>
+                        </li>
+
+                       
+                        <li><strong>Requirements:</strong>
+                            <ul>
+                                <li>Proficiency in Figma, Adobe XD, or similar design tools.</li>
+                                <li>Strong portfolio demonstrating professional communication and teamwork framework.
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
+
                     <a href="apply.html">
                         Apply now →
                     </a>
+
 
                 </article>
 
@@ -174,15 +236,26 @@
 
                 <article class="card">
                     <h3>Product Listing Specialist</h3>
+
                     <ul>
-                        <li>Reference Number: FE102</li>
-                        <li>Short Description:
-                            We are seeking a talented Front-End Web Developer to build, optimize, and maintain
-                            responsive,
-                            accessible customer-facing web interfaces for our online retail platform.</li>
-                        <li>Salary: $1,200 – $1,800 / month</li>
-                        <li>Reporting Line: Reports to the Technical Lead / Engineering Manager</li> <li>Professional Communication and Presentation</li>
-                         <li>Teamwork Framework</li>
+                        <li><strong>Reference Number:</strong> PL102</li>
+                        <li><strong>Short Description:</strong> We are seeking a detail-oriented Product Listing
+                            Specialist to manage, optimize, and organize e-commerce product catalogs and metadata
+                            efficiently.</li>
+                        <li><strong>Salary:</strong> $1,000 – $1,500 / month</li>
+                        <li><strong>Reporting Line:</strong> Reports to the E-commerce Manager / Operations Lead</li>
+                        <li><strong>Key Responsibilities:</strong>
+                            <ul>
+                                <li>Upload and manage product inventories, descriptions, and pricing data.</li>
+                                <li>Optimize listings for search visibility and conversion rates.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Requirements & Framework:</strong>
+                            <ul>
+                                <li>Professional Communication and Presentation</li>
+                                <li>Teamwork Framework</li>
+                            </ul>
+                        </li>
                     </ul>
 
                     <a href="apply.html">

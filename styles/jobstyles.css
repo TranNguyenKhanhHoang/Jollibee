@@ -1,0 +1,357 @@
+
+/* ================= ASIDE ================= */
+.sidebar-container {
+    float: right;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px; 
+    box-sizing: border-box;
+}
+
+
+.career-tips,
+.job-sidebar,
+.aside-widget {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-left: 10px solid #006241; 
+    border-radius: 12px;
+    padding: 20px 22px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.career-tips:hover,
+.job-sidebar:hover,
+.aside-widget:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+.sidebar-container h3 {
+    color: #1e3932;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+
+.sidebar-container p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0 0 10px 0;
+}
+
+
+.sidebar-container ul {
+    padding-left: 18px;
+    margin: 8px 0 0 0;
+}
+
+.sidebar-container li {
+    font-size: 0.88rem;
+    margin-bottom: 8px;
+    color: #444;
+    line-height: 1.4;
+}
+
+.sidebar-container li:last-child {
+    margin-bottom: 0;
+}
+
+/* EMAIL LINKS */
+.job-sidebar a,
+.aside-widget a {
+    color: #00754a;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.job-sidebar a:hover,
+.aside-widget a:hover {
+    text-decoration: underline;
+}
+
+/* Badge / Highlight for Benefits */
+.tag-badge {
+    display: inline-block;
+    background: #d4e9e2;
+    color: #1e3932;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-right: 4px;
+}
+ /* <!-- JOB LISTS --> */
+section {
+    background: #ffffff;
+    margin-bottom: 35px;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .08);
+}
+
+section h2 {
+    color: #00704A; 
+    margin-bottom: 15px;
+}
+
+
+ .open-positions {
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    padding-right: 30px; 
+}
+
+.card {
+    background: #d4e9e2;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .12);
+    transition: .3s;
+    width: 100%; 
+    box-sizing: border-box; 
+    
+}
+
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .18);
+}
+
+.card h3 {
+    color: #00704A;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card ul {
+    margin-left: 20px;
+}
+
+.card li {
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+
+
+
+body {
+    background: #f4f7f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+ /* <!-- RECRUITMENT PROCESS--> */
+
+ .rp{
+    
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    padding-right: 30px; 
+   
+}
+
+
+.rp ol {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    counter-reset: step-counter;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.rp li {
+    counter-increment: step-counter;
+    background: #d4e9e2;
+    padding: 15px 15px;
+    border-radius: 30px;
+    font-weight: 600;
+    min-width: 250px;      
+    text-align: center;
+} 
+
+.rp li::before {
+  content: counter(step-counter) ". "; 
+  font-weight: bold;
+  margin-right: 6px;
+} 
+
+/* ---------- FOOTER ---------- */
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+
+@media (max-width: 992px) {
+
+    /* Page banner */
+    section.page-banner {
+        padding: 50px 18px;
+    }
+
+    section.page-banner h1 {
+        font-size: 2.3rem;
+    }
+
+    section.page-banner p {
+        font-size: 1rem;
+    }
+
+    /* Main layout: keep two columns */
+    main {
+        padding: 30px 18px;
+    }
+
+    .open-positions {
+        width: 65%;
+        padding-right: 20px;
+    }
+
+    .sidebar-container {
+        width: 30%;
+        gap: 25px;
+    }
+
+    .rp {
+        width: 65%;
+        padding-right: 20px;
+    }
+
+    /* Job cards */
+    .card {
+        padding: 22px;
+    }
+
+    .card li {
+        font-size: 0.95rem;
+    }
+
+    /* Recruitment process */
+    .rp ol {
+        gap: 20px;
+    }
+
+    .rp li {
+        min-width: 220px;
+    }
+
+    /* Sidebar boxes */
+    .career-tips,
+    .job-sidebar,
+    .aside-widget {
+        padding: 18px;
+    }
+
+    /* Sections */
+    section {
+        padding: 28px 24px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    /* Page banner */
+    section.page-banner {
+        padding: 40px 15px;
+    }
+
+    section.page-banner h1 {
+        font-size: 2rem;
+    }
+
+    section.page-banner p {
+        font-size: 0.95rem;
+    }
+
+    /* Main layout: change to one column */
+    main {
+        padding: 25px 15px;
+    }
+
+    .sidebar-container,
+    .open-positions,
+    .rp {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    /* Sidebar */
+    .sidebar-container {
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    .career-tips,
+    .job-sidebar,
+    .aside-widget {
+        padding: 18px;
+    }
+
+    /* Job sections */
+    section {
+        padding: 22px 18px;
+        margin-bottom: 25px;
+    }
+
+    /* Job cards */
+    .card {
+        width: 100%;
+        padding: 20px;
+        margin: 18px 0;
+    }
+
+    .card ul {
+        margin-left: 18px;
+    }
+
+    .card li {
+        font-size: 0.9rem;
+    }
+
+    /* Recruitment process: display steps vertically */
+    .rp ol {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        padding-left: 0;
+    }
+
+    .rp li {
+        width: 100%;
+        min-width: 0;
+        padding: 15px;
+    }
+
+}
+
+
+
+
+
+

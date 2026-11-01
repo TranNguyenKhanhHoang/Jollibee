@@ -1,0 +1,339 @@
+/* ===========================
+   NovaCart Application Form
+   applystyle.css
+   Load after styles.css
+   =========================== */
+
+body {
+    background: #f4f7f5;
+    color: #1e3932;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(48px, 8vw, 92px) 5%;
+    color: white;
+    background: linear-gradient(120deg, #004d35, #006241 65%, #168264);
+}
+
+header::after {
+    position: absolute;
+    top: -100px;
+    right: 8%;
+    width: 280px;
+    height: 280px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 50%;
+    content: "";
+    box-shadow: 0 0 0 35px rgba(255, 255, 255, .045),
+                0 0 0 70px rgba(255, 255, 255, .03);
+    pointer-events: none;
+}
+
+header h1,
+header p {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 900px);
+    margin: 0 auto;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    line-height: 1.15;
+}
+
+header p {
+    color: #d4e9e2;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* ---------- Form ---------- */
+
+main {
+    position: relative;
+    width: min(90%, 900px);
+    margin: -28px auto 64px;
+}
+
+form {
+    display: grid;
+    gap: 18px;
+}
+
+form > fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 24px 28px 26px;
+    border: 1px solid #e1e8e4;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(30, 57, 50, .07);
+    transition: .2s;
+}
+
+form > fieldset:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(30, 57, 50, .11);
+}
+
+form > fieldset > legend {
+    float: left;
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 0 0 12px;
+    border-bottom: 1px solid #e8efeb;
+    color: #006241;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+form > fieldset > legend + * {
+    clear: both;
+}
+
+/* ---------- Fields ---------- */
+
+.field {
+    min-width: 0;
+    margin: 0 0 16px;
+}
+
+.field:last-child {
+    margin-bottom: 0;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.field > label {
+    display: block;
+    margin-bottom: 6px;
+    color: #1e3932;
+    font-size: .94rem;
+    font-weight: 600;
+}
+
+.hint {
+    color: #687b74;
+    font-size: .88em;
+    font-weight: 400;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 13px;
+    border: 1px solid #cbd9d2;
+    border-radius: 8px;
+    outline: none;
+    color: #1e3932;
+    background: white;
+    font: inherit;
+    font-size: .95rem;
+    transition: .2s;
+}
+
+select {
+    cursor: pointer;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #93a29b;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #006241;
+    background: #fcfefd;
+    box-shadow: 0 0 0 4px rgba(0, 98, 65, .13);
+}
+
+/* ---------- Options ---------- */
+
+form fieldset fieldset {
+    min-width: 0;
+    margin: 4px 0 0;
+    padding: 14px 16px 16px;
+    border: 1px solid #dce7e1;
+    border-radius: 10px;
+    background: #f8fbf9;
+}
+
+form fieldset fieldset legend {
+    padding: 0 5px;
+    color: #1e3932;
+    font-size: .92rem;
+    font-weight: 600;
+}
+
+.options,
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.options label,
+.skills label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 9px 12px;
+    border: 1px solid #dce7e1;
+    border-radius: 8px;
+    color: #29483e;
+    background: white;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 500;
+    transition: .18s;
+}
+
+.options label:hover,
+.skills label:hover {
+    transform: translateY(-1px);
+    border-color: #8ab4a3;
+    background: #f3f8f5;
+    box-shadow: 0 3px 8px rgba(30, 57, 50, .08);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    flex: 0 0 auto;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    accent-color: #006241;
+}
+
+.skills {
+    margin-bottom: 20px;
+}
+
+/* ---------- Buttons ---------- */
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.actions button {
+    min-height: 47px;
+    padding: 11px 24px;
+    border: 2px solid #006241;
+    border-radius: 30px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    transition: .18s;
+}
+
+.actions button[type="submit"] {
+    color: white;
+    background: #006241;
+    box-shadow: 0 5px 12px rgba(0, 98, 65, .18);
+}
+
+.actions button[type="submit"]:hover {
+    transform: translateY(-2px);
+    background: #004d35;
+    box-shadow: 0 8px 16px rgba(0, 77, 53, .22);
+}
+
+.actions button[type="reset"] {
+    color: #006241;
+    background: white;
+}
+
+.actions button[type="reset"]:hover {
+    color: white;
+    background: #006241;
+}
+
+.actions button:focus-visible {
+    outline: 3px solid #e5ad48;
+    outline-offset: 3px;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    padding: 38px 20px;
+    background: #1e3932;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 680px) {
+    header {
+        padding: 48px 6% 68px;
+    }
+
+    main {
+        width: 92%;
+        margin-top: -22px;
+    }
+
+    form {
+        gap: 13px;
+    }
+
+    form > fieldset {
+        padding: 19px 17px 21px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .options,
+    .skills {
+        gap: 7px;
+    }
+
+    .options label,
+    .skills label {
+        padding: 8px 10px;
+    }
+
+    .actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    form > fieldset,
+    .options label,
+    .skills label,
+    .actions button {
+        transition: none;
+    }
+}

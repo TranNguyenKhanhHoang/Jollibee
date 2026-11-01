@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 /* ================= ASIDE ================= */
 .sidebar-container {
@@ -7,45 +6,6 @@
     display: flex;
     flex-direction: column;
     gap: 60px; 
-=======
-/* ================= PAGE HERO BANNER ================= */
-.page-banner {
-    background: linear-gradient(135deg, #1e3932 0%, #00754a 100%);
-    color: #ffffff;
-    padding: 60px 20px;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    border-radius: 0 !important;
-}
-
-.page-banner .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.page-banner h1 {
-    font-size: 2.6rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #ffffff;
-}
-
-.page-banner p {
-    font-size: 1.1rem;
-    color: #d4e9e2;
-    margin: 0;
-    font-weight: 400;
-}
-/* ================= ASIDE ================= */
-.sidebar-container {
-    float: right;
-    width: 28%;
-    display: flex;
-    flex-direction: column;
-    gap: 95px; 
->>>>>>> 0047ec80dec5d35e500e3e57c46cb3f93b654f97
     box-sizing: border-box;
 }
 
@@ -129,11 +89,7 @@
     margin-right: 4px;
 }
  /* <!-- JOB LISTS --> */
-<<<<<<< HEAD
 section {
-=======
- section {
->>>>>>> 0047ec80dec5d35e500e3e57c46cb3f93b654f97
     background: #ffffff;
     margin-bottom: 35px;
     padding: 35px;
@@ -142,11 +98,7 @@ section {
 }
 
 section h2 {
-<<<<<<< HEAD
     color: #00704A; 
-=======
-    color: #00704A;
->>>>>>> 0047ec80dec5d35e500e3e57c46cb3f93b654f97
     margin-bottom: 15px;
 }
 
@@ -177,14 +129,9 @@ section h2 {
 }
 
 .card h3 {
-<<<<<<< HEAD
     color: #00704A;
     margin-bottom: 10px;
     font-weight: bold;
-=======
-    color: #444;
-    margin-bottom: 10px;
->>>>>>> 0047ec80dec5d35e500e3e57c46cb3f93b654f97
 }
 
 .card ul {
@@ -254,7 +201,6 @@ main::after {
     clear: both;
 }
 
-<<<<<<< HEAD
 
 /* ================= RESPONSIVE DESIGN ================= */
 
@@ -409,5 +355,3 @@ main::after {
 
 
 
-=======
->>>>>>> 0047ec80dec5d35e500e3e57c46cb3f93b654f97
